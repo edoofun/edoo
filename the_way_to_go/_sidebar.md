@@ -3,6 +3,8 @@ __Go入门指南__
 * [前言](./)
 * [目录](directory)
 * [关于第 16 章第10节的讨论](Discussion_about_16.10)
+* [示例](https://github.com/unknwon/the-way-to-go_ZH_CN/tree/master/eBook/examples)
+* [练习题](https://github.com/unknwon/the-way-to-go_ZH_CN/tree/master/eBook/exercises)
 * __第一部分：学习 Go 语言__  
 * 第 1 章：Go 语言的起源，发展与普及
   * [1.1 起源与发展](01.1)
