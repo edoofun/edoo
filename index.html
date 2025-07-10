@@ -33,8 +33,8 @@
             },
             // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
             loadNavbar: true,
-            // 封面支持，默认加载的是项目根目录下的_coverpage.md文件
-            coverpage: true,
+            // 去除封面支持，默认加载的是项目根目录下的_coverpage.md文件
+            coverpage: false,
             // 最大支持渲染的标题层级
             maxLevel: 5,
             // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
@@ -104,11 +104,11 @@
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
   <script>
     const gitalk = new Gitalk({
-      clientID: 'Github Application Client ID',
-      clientSecret: 'Github Application Client Secret',
-      repo: 'Github repo',
-      owner: 'Github repo owner',
-      admin: ['Github repo collaborators, only these guys can initialize github issues'],
+      clientID: '49390052444c7187d6d0',
+      clientSecret: '350c937d2b639ec368c541352e293804ef5aa1aa',
+      repo: 'edoo-comments',
+      owner: 'edoofun',
+      admin: ['edoofun'],
       // facebook-like distraction free mode
       distractionFreeMode: false
     })
@@ -116,6 +116,5 @@
   <!--字数统计-->
   <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
   
-
 </body>
 </html>
