@@ -80,7 +80,7 @@
   * [Kubernetes源码探秘：从早期设计看容器编排的演进](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/kep/kubernetes-yuan-ma-tan-mi-cong-zao-qi-she-ji-kan-rong-qi-bian-pai-de-yan-jin.md)
   * [2025-0521-Add a list of modules that should be pinned at current versions #131871](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/kep/2025-0521-add-a-list-of-modules-that-should-be-pinned-at-current-versions-131871.md)
 
-## 平台工程训练营一期
+## 常用教程
 
 * [k8s 安装教程](ping-tai-gong-cheng-xun-lian-ying-yi-qi/k8s-an-zhuang-jiao-cheng/README.md)
   * [01- ansible 介绍](ping-tai-gong-cheng-xun-lian-ying-yi-qi/k8s-an-zhuang-jiao-cheng/01-ansible-jie-shao.md)
