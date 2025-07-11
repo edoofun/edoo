@@ -1,108 +1,23 @@
 <!-- docs/_navbar.md -->
 
-# K8s源码学习
+## 你能回答如下问题吗？
+### 本电子书主要用于k8s源码的学习，让你更了解k8s的底层原理和机制。
 
-* [第零章 ：阅读源码必知必会](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/k8s-yuan-ma-kai-fa-bi-zhi-bi-hui/README.md)
-  * [01-本地调试开发k8s](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/k8s-yuan-ma-kai-fa-bi-zhi-bi-hui/01-tiao-shi-kai-fa-k8s.md)
-  * [02-借助minikube调试源码](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/k8s-yuan-ma-kai-fa-bi-zhi-bi-hui/02-jie-zhu-minikube-tiao-shi-yuan-ma.md)
-  * [02- 当你运行 kubectl create deployment 命令时发生了什么](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/k8s-yuan-ma-kai-fa-bi-zhi-bi-hui/02-dang-ni-yun-xing-kubectl-create-deployment-ming-ling-shi-fa-sheng-le-shen-me.md)
-* [第一章： client-go](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/client-go/README.md)
-  * [01-client-go](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/client-go/01-client-go.md)
-  * [02-Informer](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/client-go/02-informer.md)
-  * [03-写一个控制器](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/client-go/03-xie-yi-ge-kong-zhi-qi.md)
-  * [04-Reflector](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/client-go/04-reflector.md)
-  * [05-Indexer](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/client-go/05-indexer.md)
-  * [06-DeltaFIFO](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/client-go/06-deltafifo.md)
-  * [07-workqueue](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/client-go/07-workqueue.md)
-  * [08-sharedProcessor](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/client-go/08-sharedprocessor.md)
-* [第二章 ：scheduler 源码](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/ren-zheng-shou-quan/schedule/README.md)
-  * [01-初识 Scheduler](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/ren-zheng-shou-quan/schedule/01-chu-shi-scheduler.md)
-  * [02-Schedule Framework](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/ren-zheng-shou-quan/schedule/02-schedule-framework.md)
-  * [03-Schedule 源码讲解](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/ren-zheng-shou-quan/schedule/03schedule-yuan-ma-jiang-jie.md)
-  * [04-Scheduler 二次开发](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/ren-zheng-shou-quan/schedule/04scheduler-er-ci-kai-fa.md)
-  * [05-nodeSelector,nodeAffinity](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/ren-zheng-shou-quan/schedule/05-nodeselector-nodeaffinity.md)
-* [第三章： operator开发](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/operator/README.md)
-  * [02-operator 二次开发背景](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/operator/02operator-er-ci-kai-fa-bei-jing.md)
-  * [01-controller-runtime](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/operator/01-controller-runtime.md)
-* [第四章 ：controller-manager 源码](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/README.md)
-  * [4.1 controller-manager 介绍](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.1-controllermanager-jie-shao.md)
-  * [4.2 controller-manager 代码](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.2-controllermanager-dai-ma.md)
-  * [4.3 deployment controller 01](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.3-deployment-controller-01.md)
-  * [4.4 deployment controller 02](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.4-deployment-controller-02.md)
-  * [4.5 deployment controller 03](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.5-deployment-controller-03.md)
-  * [4.6 replicaset controller 01](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.6-replicaset-controller-01.md)
-  * [4.7 replicaset controller 02](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.7-replicaset-controller-02.md)
-  * [4.8 replicaset controller 03](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.8-replicaset-controller-03.md)
-  * [4.9 Kubernetes Service](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.9-kubernetes-service.md)
-  * [4.10 endpoint controller](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.10-endpoint.md)
-  * [4.11 endpointSlice controller](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.11-endpointslice-controller.md)
-  * [4.12 statefulset controller分析](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.12-statefulset-controller-fen-xi.md)
-  * [4.13 daemonset controller源码分析](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.13-daemonset-controller-yuan-ma-fen-xi.md)
-  * [4.16 k8s GC](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/controller-manager/4.16-k8s-gc.md)
-* [第五章： apiserver 源码解析](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/README.md)
-  * [5.1 什么是 k8s 资源](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.1-k8s-he-xin-shu-ju-jie-gou-fen-xi.md)
-  * [5.2 初识 kube-apiserver](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.2-shen-me-shi-apimachinery.md)
-  * [5.3 服务启动分析](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.18-apiserver-yuan-ma-fen-xi-01.md)
-  * [5.4 路由注册](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.4-lu-you-zhu-ce.md)
-  * [5.5 API 组和版本控制](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.10-api-zu-he-ban-ben-kong-zhi-chu-tan.md)
-  * [5.6 scheme](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.11-scheme-chu-shi.md)
-  * [5.7 认证](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.7-ren-zheng.md)
-  * [5.8 鉴权](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.8-jian-quan.md)
-  * [5.9 准入](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.9-zhun-ru.md)
-  * [5.20 服务端和客户端 apply](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.6-fu-wu-duan-he-ke-hu-duan-apply.md)
-  * [5.20 pod 生命周期和 conditions 浅析](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.7-pod-sheng-ming-zhou-qi-he-conditions-qian-xi.md)
-  * [5.20 event 源码解析](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.8-event-yuan-ma-jie-xi.md)
-  * [5.13 序列化器与序列化器工厂](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.13-xu-lie-hua-qi-yu-xu-lie-hua-qi-gong-chang.md)
-  * [5.14 序列化器与序列化器工厂2](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.14-xu-lie-hua-qi-yu-xu-lie-hua-qi-gong-chang-2.md)
-  * [5.15 序列化器与序列化工厂3](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.15-xu-lie-hua-qi-yu-xu-lie-hua-gong-chang-3.md)
-  * [5.16 apimachinery在 client-go中的使用](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-wu-zhang-apimachinery/5.16-apimachinery-zai-clientgo-zhong-de-shi-yong.md)
-* [第六章： kubelet 源码分析](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-liu-zhang-kubelet-yuan-ma-fen-xi/README.md)
-  * [01-kubelet 创建pod 流程](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-liu-zhang-kubelet-yuan-ma-fen-xi/01kubelet-chuang-jian-pod-liu-cheng.md)
-  * [02-kubelet 探针](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-liu-zhang-kubelet-yuan-ma-fen-xi/02kubelet-tan-zhen.md)
-  * [03-kubelet 驱逐](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-liu-zhang-kubelet-yuan-ma-fen-xi/03kubelet-qu-zhu.md)
-  * [04-kubelet pleg](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-liu-zhang-kubelet-yuan-ma-fen-xi/04-kubelet-pleg.md)
-  * [05-kubelet statusManager](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-liu-zhang-kubelet-yuan-ma-fen-xi/05-kubelet-statusmanager.md)
-  * [06-kubelet garbageCollect](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-liu-zhang-kubelet-yuan-ma-fen-xi/06-kubelet-garbagecollect.md)
-  * [07-kubelet nodestatus](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-liu-zhang-kubelet-yuan-ma-fen-xi/07-kubelet-nodestatus.md)
-* [第七章： kubeproxy 源码分析](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-qi-zhang-kubeproxy-yuan-ma-fen-xi.md)
-* [第八章： kubectl 源码分析](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-ba-zhang-kubectl-yuan-ma-fen-xi.md)
-* [第九章： cloud-controller-manager 源码分析](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-jiu-zhang-cloudcontrollermanager-yuan-ma-fen-xi.md)
-* [第十一章：gpu](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-shi-yi-zhang-gpu/README.md)
-  * [在 k8s 上安装 gpu](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/di-shi-yi-zhang-gpu/zai-k8s-shang-an-zhuang-gpu.md)
-* [Kep](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/kep/README.md)
-  * [sig-api-machinery](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/kep/sig-api-machinery/README.md)
-    * [5.12 k8s api-changes（翻译）](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/kep/sig-api-machinery/5.12-k8s-apichanges-fan-yi.md)
-    * [1601-k8s.io/client-go 中的 context 支持](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/kep/sig-api-machinery/1601k8s.ioclientgo-zhong-de-context-zhi-chi.md)
-    * [5.3 api-conventions（翻译）](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/kep/sig-api-machinery/5.2-api-conventions.md)
-    * [KEP-3157 allow informers for getting a stream of data instead of chunking.](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/kep/sig-api-machinery/kep-3157-allow-informers-for-getting-a-stream-of-data-instead-of-chunking..md)
-  * [k8s 1.33 版本预览](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/kep/k8s-1.33-ban-ben-yu-lan.md)
-  * [k8s 1.33 发布](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/kep/k8s-1.33-fa-bu.md)
-  * [Kubernetes源码探秘：从早期设计看容器编排的演进](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/kep/kubernetes-yuan-ma-tan-mi-cong-zao-qi-she-ji-kan-rong-qi-bian-pai-de-yan-jin.md)
-  * [2025-0521-Add a list of modules that should be pinned at current versions #131871](k8s-yuan-ma-ren-cai-fu-hua-xun-lian-ying/kep/2025-0521-add-a-list-of-modules-that-should-be-pinned-at-current-versions-131871.md)
-
-## 常用教程
-
-* [k8s 安装教程](ping-tai-gong-cheng-xun-lian-ying-yi-qi/k8s-an-zhuang-jiao-cheng/README.md)
-  * [01- ansible 介绍](ping-tai-gong-cheng-xun-lian-ying-yi-qi/k8s-an-zhuang-jiao-cheng/01-ansible-jie-shao.md)
-  * [02-使用 kubespray、kubekey安装 k8s集群](ping-tai-gong-cheng-xun-lian-ying-yi-qi/k8s-an-zhuang-jiao-cheng/02-shi-yong-kubespraykubekey-an-zhuang-k8s-ji-qun.md)
-  * [03-dashboard](ping-tai-gong-cheng-xun-lian-ying-yi-qi/k8s-an-zhuang-jiao-cheng/03-dashboard.md)
-  * [04-自建k8s集群支持 LoadBalancer](ping-tai-gong-cheng-xun-lian-ying-yi-qi/k8s-an-zhuang-jiao-cheng/04-zi-jian-k8s-ji-qun-zhi-chi-loadbalancer.md)
-* [helm 教程](ping-tai-gong-cheng-xun-lian-ying-yi-qi/helm-jiao-cheng/README.md)
-  * [01-快速入门](ping-tai-gong-cheng-xun-lian-ying-yi-qi/helm-jiao-cheng/01.md)
-  * [02-如何使用](ping-tai-gong-cheng-xun-lian-ying-yi-qi/helm-jiao-cheng/02.md)
-  * [03-制作chart](ping-tai-gong-cheng-xun-lian-ying-yi-qi/helm-jiao-cheng/03.md)
-  * [04-chart学习](ping-tai-gong-cheng-xun-lian-ying-yi-qi/helm-jiao-cheng/04.md)
-  * [05-chart hook](ping-tai-gong-cheng-xun-lian-ying-yi-qi/helm-jiao-cheng/05.md)
-  * [06-chart 指南](ping-tai-gong-cheng-xun-lian-ying-yi-qi/helm-jiao-cheng/06.md)
-* [jenkins教程](ping-tai-gong-cheng-xun-lian-ying-yi-qi/jenkins-jiao-cheng/README.md)
-  * [01、安装 jenkins](ping-tai-gong-cheng-xun-lian-ying-yi-qi/jenkins-jiao-cheng/01-an-zhuang-jenkins.md)
-  * [02、创建你的第一条pipeline](ping-tai-gong-cheng-xun-lian-ying-yi-qi/jenkins-jiao-cheng/02-chuang-jian-ni-de-di-yi-tiao-pipeline.md)
-  * [03、pipeline 入门](ping-tai-gong-cheng-xun-lian-ying-yi-qi/jenkins-jiao-cheng/03pipeline-ru-men.md)
-  * [04、使用 jenkinsfile](ping-tai-gong-cheng-xun-lian-ying-yi-qi/jenkins-jiao-cheng/04-shi-yong-jenkinsfile.md)
-  * [05、Jenkins CI/CD 管道实战1 【go-k8s】](ping-tai-gong-cheng-xun-lian-ying-yi-qi/jenkins-jiao-cheng/05jenkins-cicd-guan-dao-shi-zhan-1-gok8s.md)
-  * [06、 Jenkins CI/CD 管道实战2 【go-主机】](ping-tai-gong-cheng-xun-lian-ying-yi-qi/jenkins-jiao-cheng/06-jenkins-cicd-guan-dao-shi-zhan-2-go-zhu-ji.md)
-* [k3s](ping-tai-gong-cheng-xun-lian-ying-yi-qi/k3s/README.md)
-  * [01-初识k3s](ping-tai-gong-cheng-xun-lian-ying-yi-qi/k3s/01-chu-shi-k3s.md)
-  * [02-使用 K3s 和 MetalLB 从头开始​​构建 Kubernetes 集群](ping-tai-gong-cheng-xun-lian-ying-yi-qi/k3s/02-shi-yong-k3s-he-metallb-cong-tou-kai-shi-gou-jian-kubernetes-ji-qun.md)
-* [docker](ping-tai-gong-cheng-xun-lian-ying-yi-qi/docker/README.md)
-  * [01-通过 docker desktop 运行容器](ping-tai-gong-cheng-xun-lian-ying-yi-qi/docker/01-tong-guo-docker-desktop-yun-xing-rong-qi.md)
+- 01 generation 和 resouceversion的区别和用途？
+- 02 k8s 有哪几种 qos策略，你能详细描述其中的一种吗？底层是linux中什么原理？
+- 03 删除一个namespace经历了哪些流程，越详细越好
+- 04 客户端 每次 watch资源都会通过apiserver 与etcd建立一个watch链接吗？如果不是，请说说问题和解决方案。
+- 05 kubelet evictPod 会排除哪种类型的？
+- 06 你能说说kubectl apply 一个文件发生的完整过程吗？越详细越好
+- 07 kubernetes中pod spec设置的limits request会转换为哪些参数进行限制
+- 08 metrics-server的采集周期，采集链路是什么样的
+- 09 kubernetes proxy中 发现长时间运行的tcp连接 如何处理invalid包 如果更优雅的解决需要修改哪个参数
+- 10 deployment rollback的原理是什么，你能给我说说背后发生了哪些事，涉及到的deploy spec上的哪些字段？
+- 11 kubelet 中pleg 是用来解决什么问题？
+- 12 pod gc 你了解吗，给我说说什么情况下pod 会被gc
+- 13 pod 不允许改哪些字段？
+- 14 limitrange 对于pod 的 update 事件会不会处理？
+- 15 请说说 cri，containerd，runc之间的关系？执行 docker run xxx 命令底层经过哪些步骤，越详细越好。
+- 16 k8s内部版本和外部版本有什么区别，etcd存的什么版本？
+- 17 client 有哪几种客户端？
+- 18 kubernetes shared Informer 机制
