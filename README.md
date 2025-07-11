@@ -106,15 +106,3 @@
   * [02-使用 K3s 和 MetalLB 从头开始​​构建 Kubernetes 集群](ping-tai-gong-cheng-xun-lian-ying-yi-qi/k3s/02-shi-yong-k3s-he-metallb-cong-tou-kai-shi-gou-jian-kubernetes-ji-qun.md)
 * [docker](ping-tai-gong-cheng-xun-lian-ying-yi-qi/docker/README.md)
   * [01-通过 docker desktop 运行容器](ping-tai-gong-cheng-xun-lian-ying-yi-qi/docker/01-tong-guo-docker-desktop-yun-xing-rong-qi.md)
-
-## 编程语言
-
-* [python入门](bian-cheng-yu-yan/python-ru-men/README.md)
-  * [python 教程](bian-cheng-yu-yan/python-ru-men/python-jiao-cheng.md)
-* [c#入门](bian-cheng-yu-yan/c-ru-men/README.md)
-  * [01、c# 之旅](bian-cheng-yu-yan/c-ru-men/01c-zhi-l.md)
-  * [02、VScode编辑器上编译C#](bian-cheng-yu-yan/c-ru-men/02vscode-bian-ji-qi-shang-bian-yi-c.md)
-
-## AI 讲 k8s 源码
-
-* [k8s 之父教你使用 AI 二次开发 k8s](ai-jiang-k8s-yuan-ma/k8s-zhi-fu-jiao-ni-shi-yong-ai-er-ci-kai-fa-k8s.md)
