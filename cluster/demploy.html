@@ -1,0 +1,2336 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&ast;&ast;&#x6ce8;&#x610f;&#x4e8b;&#x9879;&#xff1a;&#x6587;&#x6863;&#x4e2d;&#x51fa;&#x73b0;&#x7684;&#x9700;&#x8981;&#x66ff;&#x6362;&#x7279;&#x5b9a;&#x503c;&#x7684;&#x547d;&#x4ee4;&#xff0c;&#x9700;&#x8981;&#x5c06;&#x539f;&#x547d;&#x4ee4;&#x590d;&#x5236;&#x5230;&#x672c;&#x5730;&#x5148;&#x66ff;&#x6362;&#xff0c;&#x518d;&#x5728;&#x670d;&#x52a1;&#x5668;&#x4e0a;&#x6267;&#x884c;&#x66ff;&#x6362;&#x540e;&#x7684;&#x547d;&#x4ee4;&ast;&ast;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        <style>
+/* 如有不懂，参看 https://theme.typora.io/doc/zh/Write-Custom-Theme/ */
+
+@import 'zj/fonts.css';
+ :root {
+    --side-bar-bg-color: #fff;
+    --control-text-color: #777;
+    /* --font-sans-serif: 'PingFangSC-Regular', 'Microsoft YaHei', , 'Source Sans Pro', sans-serif !important; */
+    --font-sans-serif: 'Source Han SerifCN', 'Microsoft YaHei', sans-serif !important;
+    --font-monospace: Courier, monospace, 'Courier New', 'Roboto Mono', 'Source Sans Pro', 'Microsoft YaHei' !important;
+    /* 主题色 */
+    --main-1: #fff3f0;
+    --main-2: #ffd4cc;
+    --main-3: #ffafa3;
+    --main-4: #ff887a;
+    --main-5: #ff5d52;
+    --main-6: #f22f27;
+    --main-7: #cc1616;
+    --main-8: #a60a0f;
+    --main-9: #80010a;
+    --main-10: #590009;
+}
+
+html {
+    font-size: 17px;
+}
+
+body {
+    /* 字体与颜色 */
+    font-family: var(--font-sans-serif);
+    color: black;
+    /* 行间距 */
+    line-height: 1.6rem;
+    /* 抗锯齿渲染，适用于高分屏 */
+    /* -webkit-font-smoothing: antialiased; */
+    /* 	裁剪溢出内容 */
+    overflow-x: hidden;
+    /* 字母间距 */
+    letter-spacing: 0;
+    margin: 0;
+}
+
+
+/* #write 为写入区域 */
+
+#write {
+    max-width: 860px;
+    padding: 20px 30px 160px;
+    margin: 0 auto;
+}
+
+
+/* 根据窗口的大小调整写作区域 */
+
+
+/* @media only screen and (min-width: 1400px) {
+    #write {
+        max-width: 1024px;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    #write {
+        max-width: 1200px;
+    }
+} */
+
+
+/* 正常文字 */
+
+#write p {
+    line-height: 1.6rem;
+    word-spacing: .05rem;
+    color: black;
+}
+
+#write>ul:first-child,
+#write>ol:first-child {
+    margin-top: 30px;
+}
+
+
+/* 链接 */
+
+a {
+    padding: 0 2px;
+    /* font-weight: 500; */
+    /* color: #4183C4; */
+    color: #0366d6;
+    /* color: #4183C4; */
+    /* text-decoration: none; */
+    /* text-decoration-color: #0366d6; */
+}
+
+
+/* 加粗 */
+
+strong {
+    padding: 0.1em;
+    /* color: #dc3545; */
+    color: #E91E63;
+    font-weight: 600;
+    /* font-family: 'Microsoft YaHei'; */
+    /* font-size: 90%; */
+}
+
+
+/* 斜体强调 */
+
+em {
+    font-style: normal;
+    background-color: #EBFFEB;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: black;
+}
+
+
+/* 行内数学公式变蓝 */
+
+.md-inline-math {
+    color: blue;
+    font-size: 100%;
+}
+
+
+/* 行间数学公式 */
+
+[mdtype="math_block"] {
+    font-size: 1.1rem;
+    /* font-size: 110%; */
+    /* color: blue; */
+}
+
+
+/* .MathJax_SVG svg {
+    font-size: 110%;
+    color: blue;
+    zoom: 1
+} */
+
+
+/* 标题编号初始化 */
+
+
+/* 首先全局进行一次reset，这样即使不添加h1标题也可以使用较低级别的标题 */
+
+#write {
+    counter-reset: h2 0 h3 0 h4 0 h5 0 h6 0
+}
+
+
+/* #write {
+    counter-reset: h1
+} */
+
+h1 {
+    counter-reset: h2
+}
+
+h2 {
+    counter-reset: h3
+}
+
+h3 {
+    counter-reset: h4
+}
+
+h4 {
+    counter-reset: h5
+}
+
+h5 {
+    counter-reset: h6
+}
+
+
+/** put counter result into headings */
+
+#write h1:before {
+    counter-increment: h1;
+    /* content: counter(h1) ". " */
+}
+
+#write h2:before {
+    counter-increment: h2;
+    content: counter(h2) ". "
+}
+
+#write h3:before,
+h3.md-focus.md-heading:before {
+    counter-increment: h3;
+    content: counter(h2) "." counter(h3) " "
+}
+
+#write h4:before,
+h4.md-focus.md-heading:before {
+    counter-increment: h4;
+    content: counter(h2) "." counter(h3) "." counter(h4) " "
+}
+
+#write h5:before,
+h5.md-focus.md-heading:before {
+    counter-increment: h5;
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " "
+}
+
+#write h6:before,
+h6.md-focus.md-heading:before {
+    counter-increment: h6;
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " "
+}
+
+
+/** override the default style for focused headings */
+
+#write>h3.md-focus:before,
+#write>h4.md-focus:before,
+#write>h5.md-focus:before,
+#write>h6.md-focus:before,
+h3.md-focus:before,
+h4.md-focus:before,
+h5.md-focus:before,
+h6.md-focus:before {
+    color: inherit;
+    border: inherit;
+    border-radius: inherit;
+    position: inherit;
+    left: initial;
+    float: none;
+    top: initial;
+    font-size: inherit;
+    padding-left: inherit;
+    padding-right: inherit;
+    vertical-align: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+
+/* h1标题样式 */
+
+h1 {
+    text-align: center;
+    padding-bottom: .2em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    /* border-bottom: 1px solid #eee; */
+}
+
+
+/* h2标题样式 */
+
+h2 {
+    padding-bottom: .2em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: 1em;
+    color: #777;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+
+/* 列表环境 */
+
+#write ol>li,
+#write ul>li {
+    /* color: #db4d52; */
+    color: #f50057;
+    font-weight: bold;
+}
+
+#write ol>li>*,
+#write ul>li>* {
+    color: #333;
+    font-weight: normal;
+}
+
+#write ol>li>*:not(ol):not(ul),
+#write ul>li>*:not(ol):not(ul) {
+    padding-left: .25rem;
+}
+
+#write ul {
+    list-style-type: disc;
+}
+
+blockquote {
+    border-left: 4px solid rgb(239, 112, 96);
+    padding: 10px 15px;
+    color: #3f3f3f;
+    background-color: #fff9f9;
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+}
+
+
+/* tr元素定义表格行 */
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #F6F8FA;
+}
+
+
+/* th元素定义表头 */
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+
+/* td元素定义表格单元格 */
+
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+
+/* 行号与代码之间的框线 */
+
+
+/* #write .CodeMirror-gutters {
+border-right: none;
+} */
+
+
+/* 行号 */
+
+.cm-s-inner .CodeMirror-linenumber {
+    width: 2ch !important;
+    font-size: 0.7rem;
+    /* color: rgba(128, 128, 255, 0.8); */
+    color: rgba(0, 92, 197, 0.8);
+}
+
+
+/* .CodeMirror-lines {
+padding-left: 4px;
+} */
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0, 28, 36, .3);
+    border-top: 1px solid #eef2f2;
+}
+
+
+/* 代码框 */
+
+#write .md-fences {
+    /* border: 1px solid #F4F4F4; */
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0 !important;
+    line-height: 1.43rem;
+    /* background-color: #F8F8F8 !important; */
+    /* background-color: #f6f8fb !important; */
+    background-color: #f6f8fa !important;
+    border-radius: 2px;
+    /* font-family: '等距更纱黑体 SC', 'Microsoft YaHei'!important; */
+    font-family: var(--font-monospace);
+    /* '等距更纱黑体 SC'  */
+    font-size: 0.9rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+
+/* 代码框中光标颜色 */
+
+#write .CodeMirror-cursors .CodeMirror-cursor {
+    border-left: 2px solid var(--main-4);
+}
+
+
+/* 行内代码 */
+
+#write code,
+tt {
+    /* padding: 1px 2px; */
+    /* border: 1px solid #e7eaed; */
+    padding: 2px 4px 0px 4px;
+    border-radius: 2px;
+    font-family: var(--font-monospace);
+    /* font-family: 'Source Code Pro', 'Microsoft YaHei'!important; */
+    font-size: 0.9rem;
+    color: #FF0000;
+    background-color: #FAEAEB;
+}
+
+tt {
+    margin: 0 2px;
+}
+
+#write .md-footnote {
+    background-color: #f8f8f8;
+    color: #e96900;
+}
+
+
+/* 任务列表小方框 */
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+    bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write>h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write>h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write>h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/**************************************
+* Header Counters in TOC
+**************************************/
+
+
+/* No link underlines in TOC */
+
+.md-toc-inner {
+    text-decoration: none;
+}
+
+.md-toc-content {
+    /* counter-reset: h1toc */
+    counter-reset: h2toc h3toc h4toc;
+    /*修复缺失上级标题时无法递增*/
+}
+
+.md-toc-h1 {
+    margin-left: 0;
+    font-size: 1.5rem;
+    display: none;
+    counter-reset: h2toc
+}
+
+.md-toc-h2 {
+    font-size: 1.1rem;
+    margin-left: 2rem;
+    counter-reset: h3toc
+}
+
+.md-toc-h3 {
+    margin-left: 3rem;
+    font-size: .9rem;
+    counter-reset: h4toc
+}
+
+.md-toc-h4 {
+    margin-left: 4rem;
+    font-size: .85rem;
+    counter-reset: h5toc
+}
+
+.md-toc-h5 {
+    margin-left: 5rem;
+    font-size: .8rem;
+    counter-reset: h6toc
+}
+
+.md-toc-h6 {
+    margin-left: 6rem;
+    font-size: .75rem;
+}
+
+.md-toc-h1:before {
+    color: black;
+    counter-increment: h1toc;
+}
+
+.md-toc-h1 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h2:before {
+    color: black;
+    counter-increment: h2toc;
+    content: counter(h2toc) ". "
+}
+
+.md-toc-h2 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h3:before {
+    color: black;
+    counter-increment: h3toc;
+    content: counter(h2toc) ". " counter(h3toc) " "
+}
+
+.md-toc-h3 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h4:before {
+    color: black;
+    counter-increment: h4toc;
+    content: counter(h2toc) ". " counter(h3toc) ". " counter(h4toc) " "
+}
+
+.md-toc-h4 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h5:before {
+    color: black;
+    counter-increment: h5toc;
+    content: counter(h2toc) ". " counter(h3toc) ". " counter(h4toc) ". " counter(h5toc) " "
+}
+
+.md-toc-h5 .md-toc-inner {
+    margin-left: 0;
+}
+
+.md-toc-h6:before {
+    color: black;
+    counter-increment: h6toc;
+    content: counter(h2toc) ". " counter(h3toc) ". " counter(h4toc) ". " counter(h5toc) ". " counter(h6toc) " "
+}
+
+.md-toc-h6 .md-toc-inner {
+    margin-left: 0;
+}
+
+
+/* 侧栏自动编号 */
+
+.sidebar-content {
+    counter-reset: h2 0 h3 0 h4 0 h5 0 h6 0
+}
+
+
+/* .sidebar-content {
+    counter-reset: h1
+} */
+
+.outline-h1 {
+    counter-reset: h2
+}
+
+.outline-h2 {
+    counter-reset: h3
+}
+
+.outline-h3 {
+    counter-reset: h4
+}
+
+.outline-h4 {
+    counter-reset: h5
+}
+
+.outline-h5 {
+    counter-reset: h6
+}
+
+.outline-h1>.outline-item>.outline-label:before {
+    counter-increment: h1;
+    /* content: counter(h1) ". " */
+}
+
+.outline-h2>.outline-item>.outline-label:before {
+    counter-increment: h2;
+    content: counter(h2) ". "
+}
+
+.outline-h3>.outline-item>.outline-label:before {
+    counter-increment: h3;
+    content: counter(h2) "." counter(h3) " "
+}
+
+.outline-h4>.outline-item>.outline-label:before {
+    counter-increment: h4;
+    content: counter(h2) "." counter(h3) "." counter(h4) " "
+}
+
+.outline-h5>.outline-item>.outline-label:before {
+    counter-increment: h5;
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " "
+}
+
+.outline-h6>.outline-item>.outline-label:before {
+    counter-increment: h6;
+    content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " "
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+/* 打印成PDF */
+
+@media print {
+    .typora-export * {
+        -webkit-print-color-adjust: exact;
+    }
+    html {
+        font-size: 15px!important;
+    }
+    body {
+        /* font-size: 16px!important; */
+        /* font-family: 'Source Han SerifCN', "Times New Roman", Times, 'SimSun', serif!important; */
+        font-family: "Times New Roman", Times, 'SimSun', serif!important;
+        color: #000000!important;
+    }
+    p {
+        color: #000000!important;
+    }
+    a {
+        color: blue!important;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+</style>
+        </head>
+        <body class="vscode-body vscode-light">
+            <h2 id="注意事项文档中出现的需要替换特定值的命令需要将原命令复制到本地先替换再在服务器上执行替换后的命令"><strong>注意事项：文档中出现的需要替换特定值的命令，需要将原命令复制到本地先替换，再在服务器上执行替换后的命令</strong></h2>
+<h2 id="mysql集群需要一个vip">MySQL集群（需要一个VIP）</h2>
+<h3 id="所有步骤必做不可遗漏任何一项必须先执行完-必做系统优化步骤"><strong>所有步骤必做，不可遗漏任何一项</strong>，<strong>必须先执行完<a href="https://weikezhijia.feishu.cn/wiki/QrXswXY2Yioi8ckNcZrcrZ0Qncg"> 【必做】系统优化</a>步骤</strong></h3>
+<h3 id="最少需要三台服务器来部署mysql集群假定三台服务器ip为111122223333hostname为middleware1middleware2middleware3vip为4444请根据现场实际情况修改"><strong>最少需要三台服务器来部署mysql集群，</strong>假定三台服务器IP为1.1.1.1、2.2.2.2、3.3.3.3，hostname为middleware1、middleware2、middleware3，VIP为4.4.4.4，<strong>请根据现场实际情况修改</strong></h3>
+<p><strong>admin_op用户设置的密码内不要包含!@#$%&amp;字符</strong></p>
+<ol>
+<li>
+<p>先在三台服务器的/etc/hosts添加hostname与ip的映射关系，类似这样(<strong>请根据现场实际情况修改</strong>)：</p>
+<p><strong>集群依赖hostname和hostname能正常解析为IP，此步骤非常重要</strong></p>
+<pre><code class="language-bash">1.1.1.1 middleware1
+2.2.2.2 middleware2
+3.3.3.3 middleware3
+</code></pre>
+</li>
+<li>
+<p>下载本文档提供的MySQL包，将其上传至三台服务器并解压(将/usr/local替换为你想要解压到的目录)</p>
+<pre><code class="language-bash">sudo tar xf mysql-8.0.32-linux-aarch64.tar.gz -C /usr/local
+sudo <span class="hljs-built_in">mv</span> /usr/local/mysql* /usr/local/mysql
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上添加mysql服务需要的配置和文件，注意事项：</p>
+<ol>
+<li>
+<p><strong>文件里加红加粗的文字为需要手动替换的部分</strong></p>
+</li>
+<li>
+<p>该配置文件启动的mysql内存缓冲池默认为8G，如需修改，请咨询SRE团队</p>
+</li>
+<li>
+<p>1.1.1.1、2.2.2.2、3.3.3.3需要替换为三台服务器的真实IP</p>
+</li>
+<li>
+<p>将/usr/local替换为mysql解压到的目录</p>
+</li>
+<li>
+<p>将/srv/mysql替换为你想要存放mysql数据和日志的目录</p>
+</li>
+<li>
+<p>admin_address的值换为本机的真实IP</p>
+</li>
+<li>
+<p>server-id的值三台分别设置1、2、3，不可重复</p>
+</li>
+<li>
+<p>loose-group_replication_group_name的值三台要保持一致，但需要随机生成，生成方法：<code>cat /proc/sys/kernel/random/uuid</code></p>
+</li>
+</ol>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建/etc/my.cnf配置文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /etc/my.cnf
+[mysql]
+auto-rehash
+port=3306
+socket=/usr/local/mysql/mysql.sock
+default-character-set=utf8mb4
+
+[mysqld]
+user=mysql
+basedir=/usr/local/mysql
+datadir=/srv/mysql/data
+bind_address=&quot;0.0.0.0&quot;
+admin_address=&quot;本机IP&quot;
+create-admin-listener-thread=ON
+server-id=分别设置为1/2/3
+port=3306
+character_set_server=utf8mb4
+socket=/usr/local/mysql/mysql.sock
+mysqlx_socket=/usr/local/mysql/mysqlx.sock
+pid-file=/usr/local/mysql/mysqld.pid
+log-error=/srv/mysql/logs/mysqld-error.log
+lc_messages_dir=/srv/mysql/logs
+relay-log=/srv/mysql/data/本机hostname-relay-bin
+relay_log_purge=1
+relay_log_recovery=ON
+max_prepared_stmt_count=1048576
+log_timestamps=SYSTEM
+read_only=0
+skip_name_resolve=1
+lower_case_table_names=1
+secure_file_priv=
+open_files_limit=65535
+max_connections=3000
+max_connect_errors=2000
+max_user_connections=2000
+thread_cache_size=64
+table_open_cache=128
+table_definition_cache=1024
+table_open_cache_instances=64
+back_log=1024
+max_allowed_packet=1024M
+read_buffer_size=4M
+read_rnd_buffer_size=4M
+sort_buffer_size=4M
+join_buffer_size=4M
+tmp_table_size=128M
+max_heap_table_size=128M
+sql_mode=&quot;STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION&quot;
+sql_require_primary_key=OFF
+
+#### binlog
+binlog_format=ROW
+log-bin=mysql-bin
+binlog_cache_size=16M
+binlog_checksum=CRC32
+sync_binlog=1
+binlog_group_commit_sync_delay=10
+binlog_group_commit_sync_no_delay_count=100
+binlog_transaction_dependency_tracking=WRITESET
+transaction_write_set_extraction=XXHASH64
+
+### slowquery
+slow_query_log_file=/srv/mysql/logs/mysql-slow.log
+slow_query_log=1
+long_query_time=0.5
+
+#### gtid
+gtid_mode=ON
+enforce_gtid_consistency=ON
+
+#### replication
+master_info_repository=TABLE
+relay_log_info_repository=TABLE
+
+#### innodb
+default_storage_engine=InnoDB
+disabled_storage_engines=&#x27;MyISAM,BLACKHOLE,FEDERATED,ARCHIVE,MEMORY&#x27;
+transaction_isolation=READ-COMMITTED
+innodb_data_file_path=ibdata1:500M:autoextend
+wait_timeout=900
+innodb_buffer_pool_size=8192M
+innodb_buffer_pool_instances=8
+innodb_thread_concurrency=24
+innodb_log_files_in_group=4
+innodb_log_file_size=500M
+innodb_log_buffer_size=96M
+innodb_file_per_table=1
+innodb_flush_log_at_trx_commit=1
+innodb_print_all_deadlocks=1
+innodb_flush_method=O_DIRECT
+innodb_flush_neighbors=0
+innodb_read_io_threads=8
+innodb_write_io_threads=8
+innodb_io_capacity=2000
+innodb_io_capacity_max=10000
+innodb_lock_wait_timeout=5
+innodb_max_dirty_pages_pct=50
+innodb_open_files=2048
+innodb_stats_on_metadata=OFF
+
+####  performance_schema
+performance_schema=ON
+performance_schema_instrument=&#x27;%memory%=on&#x27;
+performance_schema_instrument=&#x27;%lock%=on&#x27;
+
+#### mysql group replication
+loose-group_replication_group_name=&quot;cdd74724-8a0f-405e-ae68-4e96fddeac22&quot;
+loose-group_replication_local_address=&quot;本机IP:13306&quot;
+loose-group_replication_group_seeds=&quot;1.1.1.1:13306,2.2.2.2:13306,3.3.3.3:13306&quot;
+loose-group_replication_ip_allowlist=&quot;1.1.1.1,2.2.2.2,3.3.3.3,127.0.0.1&quot;
+loose-group_replication_start_on_boot=OFF
+loose-group_replication_bootstrap_group=OFF
+loose-group_replication_single_primary_mode=ON
+loose-group_replication_enforce_update_everywhere_checks=OFF
+loose-group_replication_consistency=BEFORE_ON_PRIMARY_FAILOVER
+loose-group_replication_transaction_size_limit=67108864
+loose-group_replication_gtid_assignment_block_size=1000000
+loose-group_replication_member_weight=30
+loose-group_replication_auto_increment_increment=7
+loose-group_replication_unreachable_majority_timeout=60
+loose-group_replication_autorejoin_tries=3
+loose-group_replication_exit_state_action=READ_ONLY
+loose-group_replication_clone_threshold=9223372036854775807
+loose-group_replication_communication_max_message_size=10485760
+loose-group_replication_components_stop_timeout=120
+loose-group_replication_compression_threshold=3000000
+loose-group_replication_flow_control_mode=QUOTA
+loose-group_replication_flow_control_certifier_threshold=25000
+loose-group_replication_flow_control_applier_threshold=25000
+loose-group_replication_flow_control_hold_percent=10
+loose-group_replication_flow_control_member_quota_percent=0
+loose-group_replication_flow_control_max_quota=0
+loose-group_replication_flow_control_min_quota=0
+loose-group_replication_flow_control_min_recovery_quota=0
+loose-group_replication_flow_control_period=1
+loose-group_replication_flow_control_release_percent=50
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建mysql用户</span>
+sudo groupadd mysql
+sudo useradd -r -s /sbin/nologin mysql -g mysql
+
+<span class="hljs-comment"># 对目录进行授权</span>
+sudo <span class="hljs-built_in">mkdir</span> -pv /srv/mysql/{data,logs}
+sudo <span class="hljs-built_in">chown</span> -R mysql.mysql {/usr/local/mysql,/srv/mysql}
+
+<span class="hljs-comment"># 确保不会有include污染</span>
+<span class="hljs-built_in">rm</span> -rf /usr/include/mysql
+
+<span class="hljs-comment"># 将MySQL动态链接库指向到对应目录</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /etc/ld.so.conf.d/mysql.conf
+/usr/local/mysql/lib/
+EOF</span>
+
+<span class="hljs-comment"># 加载动态链接库</span>
+sudo ldconfig
+
+<span class="hljs-comment"># 创建include软链接</span>
+sudo <span class="hljs-built_in">ln</span> -s /usr/local/mysql/include /usr/include/mysql
+
+<span class="hljs-comment"># 添加环境变量</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /etc/profile.d/mysql.sh
+export PATH=/usr/local/mysql/bin/:\$PATH
+EOF</span>
+
+<span class="hljs-comment"># 启用环境变量</span>
+<span class="hljs-built_in">source</span> /etc/profile
+
+<span class="hljs-comment"># 创建mysqld.service</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /etc/systemd/system/mysqld.service
+[Unit]
+Description=MySQL Server
+Documentation=man:mysqld(8)
+Documentation=http://dev.mysql.com/doc/refman/en/using-systemd.html
+After=network.target
+After=syslog.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+User=mysql
+Group=mysql
+ExecStart=/usr/local/mysql/bin/mysqld --defaults-file=/etc/my.cnf --explicit_defaults_for_timestamp=OFF
+LimitNOFILE = 65536
+Environment=MYSQLD_PARENT_PID=1
+EOF</span>
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上初始化mysql并启动(将/usr/local替换为你解压到的目录，将<strong>/srv/mysql/data替换</strong>为你想要存放mysql数据的目录）</p>
+<pre><code class="language-bash">/usr/local/mysql/bin/mysqld --defaults-file=/etc/my.cnf --datadir=/srv/mysql/data --initialize-insecure --user=mysql
+
+<span class="hljs-comment"># 等待初始化命令执行结束，启用mysql服务</span>
+sudo systemctl daemon-reload &amp; sudo systemctl <span class="hljs-built_in">enable</span> --now mysqld
+
+<span class="hljs-comment"># 等待mysql服务启动完毕后，给默认的root账号添加密码</span>
+mysql -u root
+<span class="hljs-comment"># 在mysql提示符后粘贴下列sql</span>
+<span class="hljs-comment"># admin_op用户设置的密码内不要包含!@#$%&amp;字符</span>
+<span class="hljs-built_in">set</span> @@sql_log_bin=0;
+create user <span class="hljs-keyword">if</span> not exists admin_op@<span class="hljs-string">&#x27;%&#x27;</span> identified WITH mysql_native_password By <span class="hljs-string">&#x27;m5DXjGtfBd&#x27;</span>;
+grant select on performance_schema.* to admin_op@<span class="hljs-string">&#x27;%&#x27;</span>;
+grant service_connection_admin on *.* to admin_op@<span class="hljs-string">&#x27;%&#x27;</span>;
+create user <span class="hljs-keyword">if</span> not exists mgr_usr@<span class="hljs-string">&#x27;%&#x27;</span> identified WITH mysql_native_password by <span class="hljs-string">&#x27;xBqCypqk0Ee&#x27;</span>;
+grant replication slave,replication client on *.* to mgr_usr@<span class="hljs-string">&#x27;%&#x27;</span>;
+create user <span class="hljs-keyword">if</span> not exists mgr_usr@<span class="hljs-string">&#x27;127.0.0.1&#x27;</span> identified WITH mysql_native_password by <span class="hljs-string">&#x27;xBqCypqk0Ee&#x27;</span>;
+grant replication slave,replication client on *.* to mgr_usr@<span class="hljs-string">&#x27;127.0.0.1&#x27;</span>;
+create user <span class="hljs-keyword">if</span> not exists mgr_usr@<span class="hljs-string">&#x27;localhost&#x27;</span> identified WITH mysql_native_password by <span class="hljs-string">&#x27;xBqCypqk0Ee&#x27;</span>;
+grant replication slave,replication client on *.* to mgr_usr@<span class="hljs-string">&#x27;localhost&#x27;</span>;
+create user <span class="hljs-keyword">if</span> not exists root@<span class="hljs-string">&#x27;%&#x27;</span> identified WITH mysql_native_password by <span class="hljs-string">&#x27;fNRx6GaGaoemM1N&#x27;</span>;
+grant all privileges on *.* to <span class="hljs-string">&#x27;root&#x27;</span>@<span class="hljs-string">&#x27;%&#x27;</span>;
+alter user root@<span class="hljs-string">&#x27;localhost&#x27;</span> identified WITH mysql_native_password by <span class="hljs-string">&#x27;fNRx6GaGaoemM1N&#x27;</span>;
+flush privileges;
+<span class="hljs-built_in">set</span> @@sql_log_bin=1;
+quit;
+</code></pre>
+</li>
+<li>
+<p>启动并构建集群</p>
+<ol>
+<li>在第一台服务器上执行</li>
+</ol>
+<pre><code class="language-bash"><span class="hljs-comment"># 登录mysql</span>
+mysql -u root -p<span class="hljs-string">&#x27;fNRx6GaGaoemM1N&#x27;</span>
+<span class="hljs-comment"># 在mysql提示符后粘贴下列sql</span>
+install plugin group_replication soname <span class="hljs-string">&#x27;group_replication.so&#x27;</span>;
+change master to
+    master_user=<span class="hljs-string">&#x27;mgr_usr&#x27;</span>,
+    master_password=<span class="hljs-string">&#x27;xBqCypqk0Ee&#x27;</span>
+    <span class="hljs-keyword">for</span> channel <span class="hljs-string">&#x27;group_replication_recovery&#x27;</span>;
+reset master;    
+<span class="hljs-built_in">set</span> global group_replication_bootstrap_group=on;
+<span class="hljs-built_in">set</span> global slave_preserve_commit_order=on;
+start group_replication;
+<span class="hljs-comment"># 不要退出和关闭窗口</span>
+</code></pre>
+<ul>
+<li>在第二、三台服务器上执行</li>
+</ul>
+<pre><code class="language-bash"><span class="hljs-comment"># 登录mysql</span>
+mysql -u root -p<span class="hljs-string">&#x27;fNRx6GaGaoemM1N&#x27;</span>
+<span class="hljs-comment"># 在mysql提示符后粘贴下列sql</span>
+install plugin group_replication soname <span class="hljs-string">&#x27;group_replication.so&#x27;</span>;
+change master to
+    master_user=<span class="hljs-string">&#x27;mgr_usr&#x27;</span>,
+    master_password=<span class="hljs-string">&#x27;xBqCypqk0Ee&#x27;</span>
+    <span class="hljs-keyword">for</span> channel <span class="hljs-string">&#x27;group_replication_recovery&#x27;</span>;
+RESET MASTER;
+<span class="hljs-built_in">set</span> global slave_preserve_commit_order=on;
+START GROUP_REPLICATION;
+quit;
+</code></pre>
+<ul>
+<li>返回第一台服务器的mysql命令行执行：</li>
+</ul>
+<pre><code class="language-bash"><span class="hljs-comment"># 在mysql提示符后粘贴下列sql</span>
+SET global group_replication_bootstrap_group=OFF;
+quit;
+</code></pre>
+</li>
+<li>
+<p>下载mgr虚拟IP漂移工具，将其上传至三台服务器并解压(将/usr/local替换为你想要解压到的目录)</p>
+<pre><code class="language-bash">sudo tar xf mgr-agent_aarch64_linux.tar.gz -C /usr/local
+sudo <span class="hljs-built_in">chmod</span> +x /usr/local/mgr-agent/bin/mgr-agent
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上添加mgr虚拟IP漂移工具需要的配置和文件，注意事项：</p>
+<ol>
+<li>
+<p><strong>文件里加红加粗的文字为需要手动替换的部分</strong></p>
+</li>
+<li>
+<p>cluster_vip的值换为分配的VIP</p>
+</li>
+<li>
+<p>nic的值换为本机IP绑定到的网卡名，可以通过<code>ip a</code>命令看到(如eth0、enp3s0等)</p>
+</li>
+<li>
+<p>1.1.1.1、2.2.2.2、3.3.3.3需要替换为三台服务器的真实IP</p>
+</li>
+<li>
+<p>admin_address的值换为本机的真实IP</p>
+</li>
+<li>
+<p>ordinal的值三台分别设置0、1、2，不可重复</p>
+</li>
+</ol>
+<pre><code class="language-bash"><span class="hljs-comment"># admin_op用户设置的密码内不要包含!@#$%&amp;字符</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /usr/local/mgr-agent/conf/agent.system
+[system]
+cluster_vip = 4.4.4.4
+nic = 本机IP绑定到的网卡名(如eth0、enp3s0等)
+polling_interval_Seconds = 5
+admin_user = admin_op
+admin_password = m5DXjGtfBd
+admin_address = 本机IP
+admin_port = 33062
+#peer_ips同时也会作为group_replication_group_seeds的值。
+peer_ips = 1.1.1.1,2.2.2.2,3.3.3.3
+ordinal = 分别设置为0/1/2
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /etc/systemd/system/mgr-agent.service
+[Unit]
+Description=MGR Agent Service
+After=network.target network-online.target mysqld.service
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/usr/local/mgr-agent
+ExecStartPre=/usr/bin/rm -rf /usr/local/mgr-agent/mgr-agent.pid
+ExecStart=/usr/local/mgr-agent/bin/mgr-agent -c /usr/local/mgr-agent/conf/agent.system start
+ExecStop=/usr/local/mgr-agent/bin/mgr-agent -c /usr/local/mgr-agent/conf/agent.system stop
+ExecStopPost=/usr/bin/rm -rf /usr/local/mgr-agent/mgr-agent.pid
+PrivateTmp=true
+Restart=on-failure
+RestartSec=1
+EOF</span>
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上启动mgr-agent服务并观察vip是否已经生效</p>
+<pre><code class="language-bash">sudo systemctl daemon-reload &amp; sudo systemctl <span class="hljs-built_in">enable</span> --now mgr-agent
+ip a
+<span class="hljs-comment"># 某一节点上看到VIP展现在列表里，另外两个节点上没有出现证明已经生效</span>
+</code></pre>
+</li>
+</ol>
+<h3 id="redis集群">Redis集群</h3>
+<p><strong>单机双实例，三台服务器6实例实现redis集群</strong></p>
+<p><strong>故需要三台服务器来部署redis集群：</strong>假定三台服务器IP为1.1.1.1、2.2.2.2、3.3.3.3，<strong>请根据现场实际情况修改</strong></p>
+<ol>
+<li>
+<p>下载redis，将其上传至三台服务器并解压(将/usr/local替换为你想要解压到的目录)</p>
+<pre><code class="language-bash">sudo tar xf redis-6.2.14_aarch64_linux.tar.gz -C /usr/local
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上添加redis服务需要的配置和文件，注意事项：</p>
+<ol>
+<li>
+<p><strong>文件里加红加粗的文字为需要手动替换的部分</strong></p>
+</li>
+<li>
+<p>将本机IP字段修改为本机真实IP</p>
+</li>
+<li>
+<p>将/usr/local替换为redis解压到的目录</p>
+</li>
+<li>
+<p>将/srv/redis替换为你想要存放redis配置、数据和日志的目录</p>
+</li>
+<li>
+<p>将redis_passwd修改为你需要的redis密码</p>
+</li>
+<li>
+<p>该配置文件启动的redis集群默认为1G内存，如需修改，请咨询SRE团队</p>
+</li>
+</ol>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建redis A实例配置文件</span>
+sudo <span class="hljs-built_in">mkdir</span> -pv /srv/redis/{port7000,port7001}/{conf,data,logs}
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /srv/redis/port7000/conf/redis.conf
+bind 本机IP
+protected-mode yes
+port 7000
+tcp-backlog 511
+timeout 0
+tcp-keepalive 0
+daemonize yes
+supervised no
+pidfile &quot;/srv/redis/port7000/data/redis.pid&quot;
+loglevel notice
+logfile &quot;/srv/redis/port7000/logs/redis.log&quot;
+databases 16
+always-show-logo yes
+save 900 1
+save 300 10
+save 60 10000
+stop-writes-on-bgsave-error yes
+rdbcompression yes
+rdbchecksum yes
+dbfilename &quot;dump-7000.rdb&quot;
+dir &quot;/srv/redis/port7000/data&quot;
+slave-serve-stale-data yes
+slave-read-only yes
+repl-diskless-sync no
+repl-diskless-sync-delay 5
+repl-disable-tcp-nodelay yes
+slave-priority 100
+maxmemory 1048576kb
+maxmemory-policy allkeys-lru
+lazyfree-lazy-eviction no
+lazyfree-lazy-expire no
+lazyfree-lazy-server-del no
+slave-lazy-flush no
+appendonly no
+appendfilename &quot;appendonly-7000.aof&quot;
+appendfsync everysec
+no-appendfsync-on-rewrite yes
+auto-aof-rewrite-percentage 80
+auto-aof-rewrite-min-size 64mb
+aof-load-truncated yes
+aof-use-rdb-preamble no
+lua-time-limit 5000
+cluster-enabled yes
+cluster-config-file &quot;/srv/redis/port7000/conf/nodes-7000.conf&quot;
+cluster-node-timeout 5000
+cluster-migration-barrier 1
+slowlog-log-slower-than 10000
+slowlog-max-len 128
+latency-monitor-threshold 0
+notify-keyspace-events &quot;gxE&quot;
+hash-max-ziplist-entries 512
+hash-max-ziplist-value 64
+list-max-ziplist-size -2
+list-compress-depth 0
+set-max-intset-entries 512
+zset-max-ziplist-entries 128
+zset-max-ziplist-value 64
+hll-sparse-max-bytes 3000
+activerehashing yes
+client-output-buffer-limit normal 0 0 0
+client-output-buffer-limit slave 256mb 64mb 60
+client-output-buffer-limit pubsub 32mb 8mb 60
+hz 10
+aof-rewrite-incremental-fsync yes
+masterauth &quot;redis_passwd&quot;
+requirepass &quot;redis_passwd&quot;
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建redis B实例配置文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /srv/redis/port7001/conf/redis.conf
+bind 本机IP
+protected-mode yes
+port 7001
+tcp-backlog 511
+timeout 0
+tcp-keepalive 0
+daemonize yes
+supervised no
+pidfile &quot;/srv/redis/port7001/data/redis.pid&quot;
+loglevel notice
+logfile &quot;/srv/redis/port7001/logs/redis.log&quot;
+databases 16
+always-show-logo yes
+save 900 1
+save 300 10
+save 60 10000
+stop-writes-on-bgsave-error yes
+rdbcompression yes
+rdbchecksum yes
+dbfilename &quot;dump-7001.rdb&quot;
+dir &quot;/srv/redis/port7001/data/&quot;
+slave-serve-stale-data yes
+slave-read-only yes
+repl-diskless-sync no
+repl-diskless-sync-delay 5
+repl-disable-tcp-nodelay yes
+slave-priority 100
+maxmemory 1048576kb
+maxmemory-policy allkeys-lru
+lazyfree-lazy-eviction no
+lazyfree-lazy-expire no
+lazyfree-lazy-server-del no
+slave-lazy-flush no
+appendonly no
+appendfilename &quot;appendonly-7001.aof&quot;
+appendfsync everysec
+no-appendfsync-on-rewrite yes
+auto-aof-rewrite-percentage 80
+auto-aof-rewrite-min-size 64mb
+aof-load-truncated yes
+aof-use-rdb-preamble no
+lua-time-limit 5000
+cluster-enabled yes
+cluster-config-file &quot;/srv/redis/port7001/conf/nodes-7001.conf&quot;
+cluster-node-timeout 5000
+cluster-migration-barrier 1
+slowlog-log-slower-than 10000
+slowlog-max-len 128
+latency-monitor-threshold 0
+notify-keyspace-events &quot;gxE&quot;
+hash-max-ziplist-entries 512
+hash-max-ziplist-value 64
+list-max-ziplist-size -2
+list-compress-depth 0
+set-max-intset-entries 512
+zset-max-ziplist-entries 128
+zset-max-ziplist-value 64
+hll-sparse-max-bytes 3000
+activerehashing yes
+client-output-buffer-limit normal 0 0 0
+client-output-buffer-limit slave 256mb 64mb 60
+client-output-buffer-limit pubsub 32mb 8mb 60
+hz 10
+aof-rewrite-incremental-fsync yes
+masterauth &quot;redis_passwd&quot;
+requirepass &quot;redis_passwd&quot;
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建redis A实例service文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /etc/systemd/system/redis-7000.service
+[Unit]
+Description=redis-server
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=root
+Group=root
+Type=forking
+PIDFile=/srv/redis/port7000/data/redis.pid
+ExecStart=/usr/local/redis/redis-server /srv/redis/port7000/conf/redis.conf
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStop=/usr/local/redis/redis-cli -p 7000 shutdown
+PrivateTmp=true
+KillMode=process
+Restart=on-failure
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建redis B实例service文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /etc/systemd/system/redis-7001.service
+[Unit]
+Description=redis-server
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=root
+Group=root
+Type=forking
+PIDFile=/srv/redis/port7001/data/redis.pid
+ExecStart=/usr/local/redis/redis-server /srv/redis/port7001/conf/redis.conf
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStop=/usr/local/redis/redis-cli -p 7001 shutdown
+PrivateTmp=true
+KillMode=process
+Restart=on-failure
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target
+EOF</span>
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上启动添加的两个redis实例服务</p>
+<pre><code class="language-bash">sudo systemctl daemon-reload &amp;&amp; sudo systemctl <span class="hljs-built_in">enable</span> --now redis-700{0,1}
+</code></pre>
+</li>
+<li>
+<p>在<strong>其中一台</strong>服务器上进行集群设置（<strong>只执行一次</strong>）</p>
+<ol>
+<li>
+<p>将/usr/local替换为redis解压到的目录</p>
+</li>
+<li>
+<p>1.1.1.1、2.2.2.2、3.3.3.3需要替换为三台服务器的真实IP</p>
+</li>
+<li>
+<p>将redis_passwd修改为你设置的redis密码</p>
+</li>
+</ol>
+<pre><code class="language-bash">/usr/local/redis/redis-cli --cluster \
+create 1.1.1.1:7000 2.2.2.2:7001 \
+2.2.2.2:7000 3.3.3.3:7001 \
+3.3.3.3:7000 1.1.1.1:7001 \
+--cluster-replicas 1 -a redis_passwd
+<span class="hljs-comment"># 出现Can I set the above configuration? (type &#x27;yes&#x27; to accept): 时，输入</span>
+<span class="hljs-built_in">yes</span>
+</code></pre>
+</li>
+</ol>
+<h2 id="es7集群">ES7集群</h2>
+<h3 id="所有步骤必做不可遗漏任何一项必须先执行完-必做系统优化步骤-1"><strong>所有步骤必做，不可遗漏任何一项</strong>，<strong>必须先执行完<a href="https://weikezhijia.feishu.cn/wiki/QrXswXY2Yioi8ckNcZrcrZ0Qncg"> 【必做】系统优化</a>步骤</strong></h3>
+<h3 id="最少需要三台服务器来部署elasticsearch集群假定三台服务器ip为111122223333请根据现场实际情况修改"><strong>最少需要三台服务器来部署ElasticSearch集群，</strong>假定三台服务器IP为1.1.1.1、2.2.2.2、3.3.3.3，<strong>请根据现场实际情况修改</strong></h3>
+<ol>
+<li>
+<p>下载本文档提供的elasticsearch包，将其上传至三台服务器并解压(将/usr/local替换为你想要解压到的目录)</p>
+<p>本文档提供的包内嵌了安全认证和分词插件，无需额外安装</p>
+<pre><code class="language-bash">sudo tar xf elasticsearch-7.10.2-linux-aarch64.tar.gz -C /usr/local
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上添加elasticsearch服务需要的配置和文件，注意事项：</p>
+<ol>
+<li>
+<p><strong>文件里加红加粗的文字为需要手动替换的部分</strong></p>
+</li>
+<li>
+<p>该配置文件启动的elasticsearch内存堆栈默认为4G，如需修改，请咨询SRE团队</p>
+</li>
+<li>
+<p>1.1.1.1、2.2.2.2、3.3.3.3需要替换为三台服务器的真实IP</p>
+</li>
+<li>
+<p>node.name的值三台分别设置esnode-1、esnode-2、esnode-3，不可重复</p>
+</li>
+<li>
+<p>将/usr/local替换为elasticsearch解压到的目录</p>
+</li>
+<li>
+<p>将/srv/elasticsearch替换为你想要存放elasticsearch数据、日志、快照的目录</p>
+</li>
+<li>
+<p>将pwd4test修改为你需要的elasticsearch密码</p>
+</li>
+</ol>
+<pre><code class="language-bash"><span class="hljs-comment"># 修改elasticsearch-env</span>
+sudo sed -i <span class="hljs-string">&#x27;38 a ES_JAVA_HOME=\/usr/local/elasticsearch-7.10.2/jdk&#x27;</span> /usr/local/elasticsearch-7.10.2/bin/elasticsearch-env
+
+<span class="hljs-comment"># 创建口令，可以将pwd4test修改为你需要的密码</span>
+sudo /usr/local/elasticsearch-7.10.2/bin/elasticsearch-keystore create
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;pwd4test&#x27;</span> | sudo /usr/local/elasticsearch-7.10.2/bin/elasticsearch-keystore add -x <span class="hljs-string">&#x27;bootstrap.password&#x27;</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建elasticsearch配置文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /usr/local/elasticsearch-7.10.2/config/elasticsearch.yml
+cluster.name: dezhu_appes
+node.name: 分别设置为esnode-1/esnode-2/esnode-3
+node.master: true
+node.data: true
+node.ingest: true
+path.data: /srv/elasticsearch/data
+path.logs: /srv/elasticsearch/logs
+path.repo: /srv/elasticsearch/snapshot
+bootstrap.memory_lock: true
+network.host: 本机IP
+discovery.seed_hosts: [&quot;1.1.1.1&quot;,&quot;2.2.2.2&quot;,&quot;3.3.3.3&quot;]
+cluster.initial_master_nodes: [&quot;1.1.1.1&quot;,&quot;2.2.2.2&quot;,&quot;3.3.3.3&quot;]
+http.port: 9200
+transport.tcp.port: 9300
+indices.fielddata.cache.size: 30%
+xpack.security.enabled: true
+xpack.security.transport.ssl.enabled: true
+xpack.security.transport.ssl.verification_mode: certificate
+xpack.security.transport.ssl.keystore.path: elastic-certificates.p12
+xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建elasticsearch用户</span>
+sudo groupadd elastic
+sudo useradd elastic -g elastic
+
+<span class="hljs-comment"># 创建对应目录并授权</span>
+sudo <span class="hljs-built_in">mkdir</span> -pv /srv/elasticsearch/{data,logs,snapshot}
+sudo <span class="hljs-built_in">chown</span> -R elastic.elastic {/srv/elasticsearch,/usr/local/elasticsearch-7.10.2}
+
+<span class="hljs-comment"># 创建elasticsearch服务</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /etc/systemd/system/elasticsearch.service
+[Unit]
+Description=elasticsearch
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=elastic
+Group=elastic
+LimitNOFILE=100000
+LimitNPROC=100000
+Restart=no
+ExecStart=/usr/local/elasticsearch-7.10.2/bin/elasticsearch
+PrivateTmp=true
+LimitMEMLOCK=infinity
+
+[Install]
+WantedBy=multi-user.target
+EOF</span>
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上启动elasticsearch服务</p>
+<pre><code class="language-bash">sudo systemctl daemon-reload &amp;&amp; sudo systemctl <span class="hljs-built_in">enable</span> --now elasticsearch
+<span class="hljs-built_in">sleep</span> 15
+<span class="hljs-comment"># 重启elasticseach使鉴权生效</span>
+sudo systemctl restart elasticsearch
+</code></pre>
+</li>
+</ol>
+<h2 id="zookeeper集群">zookeeper集群</h2>
+<h3 id="所有步骤必做不可遗漏任何一项必须先执行完-必做系统优化步骤-2"><strong>所有步骤必做，不可遗漏任何一项</strong>，<strong>必须先执行完<a href="https://weikezhijia.feishu.cn/wiki/QrXswXY2Yioi8ckNcZrcrZ0Qncg"> 【必做】系统优化</a>步骤</strong></h3>
+<h3 id="依赖jdk需要先执行完-选装jdk安装">依赖JDK，需要先执行完<a href="https://weikezhijia.feishu.cn/wiki/LjYnwRqQpiWAk9kXmKxcQPOYn2e"> 【选装】JDK安装</a></h3>
+<h3 id="最少需要三台服务器来部署zookeeper集群假定三台服务器ip为111122223333请根据现场实际情况修改"><strong>最少需要三台服务器来部署ZooKeeper集群，</strong>假定三台服务器IP为1.1.1.1、2.2.2.2、3.3.3.3，<strong>请根据现场实际情况修改</strong></h3>
+<ol>
+<li>
+<p>下载本文档提供的zookeeper包，将其上传至三台服务器并解压(将/usr/local替换为你想要解压到的目录)</p>
+<pre><code class="language-bash">sudo tar xf apache-zookeeper-3.7.1-bin.tar.gz -C /usr/local
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上添加zookeeper服务需要的配置和文件，注意事项：</p>
+<ol>
+<li>
+<p><strong>文件里加红加粗的文字为需要手动替换的部分</strong></p>
+</li>
+<li>
+<p>为了提升zookeeper的性能，本配置未限制内存使用量，从实际使用来看，zookeeper占用内存峰值在2G以下，如果确实需要限制，请联系SRE团队支持</p>
+</li>
+<li>
+<p>1.1.1.1、2.2.2.2、3.3.3.3需要替换为三台服务器的真实IP</p>
+</li>
+<li>
+<p>三台服务器myid文件的内容为1、2、3，不可重复</p>
+</li>
+<li>
+<p>将/usr/local替换为zookeeper解压到的目录</p>
+</li>
+<li>
+<p>将/srv/zookeeper替换为你想要存放zookeeper数据、日志的目录</p>
+</li>
+<li>
+<p>/opt需要替换为执行<a href="https://weikezhijia.feishu.cn/wiki/LjYnwRqQpiWAk9kXmKxcQPOYn2e"> 【选装】JDK安装</a>时，指定的jdk解压到的目录</p>
+</li>
+<li>
+<p>将pwd4test修改为你需要的zookeeper密码</p>
+</li>
+</ol>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建对应目录</span>
+sudo <span class="hljs-built_in">mkdir</span> -pv /srv/zookeeper/{data,logs}
+sudo <span class="hljs-built_in">mkdir</span> -pv /usr/local/apache-zookeeper-3.7.1-bin/conf/jaas
+
+<span class="hljs-comment"># 添加myid文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /srv/zookeeper/data/myid
+内容分别为1/2/3
+EOF</span>
+
+<span class="hljs-comment"># 添加认证加载</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /usr/local/apache-zookeeper-3.7.1-bin/conf/java.env
+SERVER_JVMFLAGS=&quot;-Djava.security.auth.login.config=/usr/local/apache-zookeeper-3.7.1-bin/conf/jaas/zk_server.conf -Dzookeeper.allowSaslFailedClients=false -Dzookeeper.sessionRequireClientSASLAuth=true&quot;
+CLIENT_JVMFLAGS=&quot;\${CLIENT_JVMFLAGS} -Djava.security.auth.login.config=/usr/local/apache-zookeeper-3.7.1-bin/conf/jaas/zk_client.conf&quot;
+EOF</span>
+
+<span class="hljs-comment"># 添加服务端认证文件，如需修改zookeeper密码，修改下文的pwd4test</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /usr/local/apache-zookeeper-3.7.1-bin/conf/jaas/zk_server.conf
+QuorumServer {
+    org.apache.zookeeper.server.auth.DigestLoginModule required
+    user_zooke=&quot;0MxQ18T_sFo&quot;;
+};
+
+QuorumLearner {
+    org.apache.zookeeper.server.auth.DigestLoginModule required
+    username=&quot;zooke&quot;
+    password=&quot;0MxQ18T_sFo&quot;;
+};
+
+Server {
+    org.apache.zookeeper.server.auth.DigestLoginModule required
+    user_kafka=&quot;pwd4test&quot;;
+};
+EOF</span>
+
+<span class="hljs-comment"># 添加客户端认证文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /usr/local/apache-zookeeper-3.7.1-bin/conf/jaas/zk_client.conf
+Client {
+    org.apache.zookeeper.server.auth.DigestLoginModule required
+    username=&quot;kafka&quot;
+    password=&quot;pwd4test&quot;;
+};
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 添加zookeeper配置文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /usr/local/apache-zookeeper-3.7.1-bin/conf/zoo.cfg
+tickTime=2000
+initLimit=10
+syncLimit=5
+dataDir=/srv/zookeeper/data
+dataLogDir=/srv/zookeeper/logs
+clientPort=2181
+maxClientCnxns=500
+autopurge.snapRetainCount=16
+autopurge.purgeInterval=168
+admin.enableServer=false
+4lw.commands.whitelist=*
+server.1=1.1.1.1:2888:3888
+server.2=2.2.2.2:2888:3888
+server.3=3.3.3.3:2888:3888
+quorum.auth.enableSasl=true
+quorum.auth.learnerRequireSasl=true
+quorum.auth.serverRequireSasl=true
+quorum.auth.learner.saslLoginContext=QuorumLearner
+quorum.auth.server.saslLoginContext=QuorumServer
+quorum.cnxn.threads.size=6
+authProvider.1=org.apache.zookeeper.server.auth.SASLAuthenticationProvider
+requireClientAuthScheme=sasl
+jaasLoginRenew=3600000
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建elasticsearch用户（主要为了复用）</span>
+sudo groupadd elastic
+sudo useradd elastic -g elastic
+
+<span class="hljs-comment"># 修改服务日志输出目录</span>
+sed -i <span class="hljs-string">&#x27;s#\$ZOOKEEPER_PREFIX/logs#\/srv/zookeeper/logs#g&#x27;</span> /usr/local/apache-zookeeper-3.7.1-bin/bin/zkEnv.sh
+
+<span class="hljs-comment"># 创建对应目录并授权</span>
+sudo <span class="hljs-built_in">chown</span> -R elastic.elastic {/srv/zookeeper,/usr/local/apache-zookeeper-3.7.1-bin}
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建zookeeper服务文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /etc/systemd/system/zookeeper.service
+[Unit]
+Description=Zookeeper Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=forking
+User=elastic
+Group=elastic
+Environment=JAVA_HOME=/opt/jdk8u345-b01
+ExecStart=/usr/local/apache-zookeeper-3.7.1-bin/bin/zkServer.sh start /usr/local/apache-zookeeper-3.7.1-bin/conf/zoo.cfg
+ExecStop=/usr/local/apache-zookeeper-3.7.1-bin/bin/zkServer.sh stop
+PIDFile=/srv/zookeeper/data/zookeeper_server.pid
+KillMode=none
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+EOF</span>
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上启动zookeeper服务</p>
+<pre><code class="language-bash">sudo systemctl daemon-reload &amp;&amp; sudo systemctl <span class="hljs-built_in">enable</span> --now zookeeper
+</code></pre>
+</li>
+</ol>
+<h2 id="kafka集群">kafka集群</h2>
+<h3 id="所有步骤必做不可遗漏任何一项必须先执行完-必做系统优化步骤-3"><strong>所有步骤必做，不可遗漏任何一项</strong>，<strong>必须先执行完<a href="https://weikezhijia.feishu.cn/wiki/QrXswXY2Yioi8ckNcZrcrZ0Qncg"> 【必做】系统优化</a>步骤</strong></h3>
+<h3 id="依赖jdk和zookeeper需要先执行完-jdk安装和-zookeeper集群">依赖JDK和zookeeper，需要先执行完<a href="https://weikezhijia.feishu.cn/wiki/LjYnwRqQpiWAk9kXmKxcQPOYn2e"> JDK安装</a>和<a href="https://weikezhijia.feishu.cn/wiki/BVk4wSXFLiegBPkApKqcOeF7nTe"> ZooKeeper集群</a></h3>
+<h3 id="最少需要三台服务器来部署kafka集群"><strong>最少需要三台服务器来部署kafka集群</strong></h3>
+<ol>
+<li>
+<p>下载本文档提供的kafka包，将其上传至三台服务器并解压(将/usr/local替换为你想要解压到的目录)</p>
+<pre><code class="language-bash">sudo tar xf kafka_2.12-2.5.1.tgz -C /usr/local
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上添加kafka服务需要的配置和文件，注意事项：</p>
+<ol>
+<li>
+<p><strong>文件里加红加粗的文字为需要手动替换的部分</strong></p>
+</li>
+<li>
+<p><strong>sed替换命令用到了转义符，命令较长，复制时请注意不要遗漏字符、不要忘记替换路径</strong></p>
+</li>
+<li>
+<p>该配置文件启动的kafka内存堆栈为4G</p>
+</li>
+<li>
+<p>1.1.1.1、2.2.2.2、3.3.3.3替换为安装zookeeper服务的三台服务器真实IP</p>
+</li>
+<li>
+<p>broker.id的值分别为1、2、3，不可重复</p>
+</li>
+<li>
+<p>将/usr/local替换为kafka解压到的目录</p>
+</li>
+<li>
+<p>将/srv/kafka替换为你想要存放kafka数据、日志的目录</p>
+</li>
+<li>
+<p>/opt需要替换为执行<a href="https://weikezhijia.feishu.cn/wiki/LjYnwRqQpiWAk9kXmKxcQPOYn2e"> JDK安装</a>时，指定的jdk解压到的目录</p>
+</li>
+<li>
+<p>将KFKadm-4test修改为你需要的kafka密码</p>
+</li>
+<li>
+<p>如果安装zookeeper时，修改了zookeeper密码，需要将文中的pwd4test改为你修改的zookeeper密码</p>
+</li>
+</ol>
+<pre><code class="language-bash"><span class="hljs-comment"># 修改kafka使用的内存堆栈大小，默认为1G，修改为4G</span>
+sudo sed -i <span class="hljs-string">&#x27;s#\-Xmx1G -Xms1G#\-Xmx4G -Xms4G#g&#x27;</span> /usr/local/kafka_2.12-2.5.1/bin/kafka-server-start.sh
+
+<span class="hljs-comment"># 修改kafka日志存储位置</span>
+sudo sed -i <span class="hljs-string">&#x27;s#\$base_dir/logs#\/srv/kafka/logs#g&#x27;</span> /usr/local/kafka_2.12-2.5.1/bin/kafka-run-class.sh
+
+<span class="hljs-comment"># 修改kafka日志切割规则</span>
+sudo sed -i <span class="hljs-string">&#x27;s#yyyy-MM-dd-HH#yyyy-MM-dd#g&#x27;</span> /usr/local/kafka_2.12-2.5.1/config/log4j.properties
+
+<span class="hljs-comment"># 添加鉴权加载</span>
+sudo sed -i <span class="hljs-string">&#x27;s#KAFKA_OPTS=\&quot;&quot;#KAFKA_OPTS=\&quot;$KAFKA_OPTS -Djava.security.auth.login.config=/usr/local/kafka_2.12-2.5.1/config/jaas.conf&quot;#g&#x27;</span> /usr/local/kafka_2.12-2.5.1/bin/kafka-run-class.sh
+
+sudo sed -i <span class="hljs-string">&#x27;s#KAFKA_JVM_PERFORMANCE_OPTS=\&quot;-server#KAFKA_JVM_PERFORMANCE_OPTS=\&quot;-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -XX:MaxInlineLevel=15 -Djava.awt.headless=true -Dzookeeper.sasl.client=true -Dzookeeper.sasl.clientconfig=ZkClient -Dzookeeper.sasl.client.username=kafka -Djava.security.auth.login.config=/usr/local/kafka_2.12-2.5.1/config/jaas.conf#g&#x27;</span> /usr/local/kafka_2.12-2.5.1/bin/kafka-run-class.sh
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 添加kafka配置文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee  /usr/local/kafka_2.12-2.5.1/config/server.properties
+broker.id=分别设置为1/2/3
+listeners=SASL_PLAINTEXT://本机IP:9092
+advertised.listeners=SASL_PLAINTEXT://本机IP:9092
+delete.topic.enable=true
+num.network.threads=5
+num.io.threads=8
+socket.send.buffer.bytes=102400
+socket.receive.buffer.bytes=102400
+socket.request.max.bytes=104857600
+log.dirs=/srv/kafka/data
+num.partitions=3
+default.replication.factor=3
+min.insync.replicas=2
+num.recovery.threads.per.data.dir=6
+offsets.topic.replication.factor=3
+transaction.state.log.replication.factor=3
+transaction.state.log.min.isr=2
+log.retention.hours=168
+log.segment.bytes=1073741824
+log.retention.check.interval.ms=300000
+zookeeper.connect=1.1.1.1:2181,2.2.2.2:2181,3.3.3.3:2181
+zookeeper.connection.timeout.ms=60000
+group.initial.rebalance.delay.ms=10000
+auto.create.topics.enable=true
+unclean.leader.election.enable=false
+security.inter.broker.protocol=SASL_PLAINTEXT
+sasl.mechanism.inter.broker.protocol=PLAIN
+sasl.enabled.mechanisms=PLAIN
+allow.everyone.if.no.acl.found=true
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 添加认证文件，如果安装zookeeper时修改了zookeeper密码，需要将pwd4test改为修改的密码</span>
+<span class="hljs-comment"># 如需修改kafka密码，修改下文的KFKadm-4test</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee  /usr/local/kafka_2.12-2.5.1/config/jaas.conf
+KafkaServer {
+    org.apache.kafka.common.security.plain.PlainLoginModule required
+    username=&quot;admin&quot;
+    password=&quot;KFKadm-4test&quot;
+    user_admin=&quot;KFKadm-4test&quot;;
+};
+
+ZkClient {
+    org.apache.zookeeper.server.auth.DigestLoginModule required
+    username=&quot;kafka&quot;
+    password=&quot;pwd4test&quot;;
+};
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 添加kafka client认证文件，如果在上个文件里修改了kafka密码，这里也要修改</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee  /usr/local/kafka_2.12-2.5.1/config/kafka_client.properties
+security.protocol=SASL_PLAINTEXT
+sasl.mechanism=PLAIN
+sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username=&quot;admin&quot; password=&quot;KFKadm-4test&quot;;
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建elasticsearch用户（主要为了复用）</span>
+sudo groupadd elastic
+sudo useradd elastic -g elastic
+
+<span class="hljs-comment"># 创建对应目录</span>
+sudo <span class="hljs-built_in">mkdir</span> -pv /srv/kafka/{data,logs}
+
+<span class="hljs-comment"># 创建对应目录并授权</span>
+sudo <span class="hljs-built_in">chown</span> -R elastic.elastic {/srv/kafka,/usr/local/kafka_2.12-2.5.1}
+
+<span class="hljs-comment"># 创建kafka服务文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /etc/systemd/system/kafka.service
+[Unit]
+Description=kafka Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=forking
+User=elastic
+Group=elastic
+Environment=JAVA_HOME=/opt/jdk8u345-b01
+ExecStart=/usr/local/kafka_2.12-2.5.1/bin/kafka-server-start.sh -daemon /usr/local/kafka_2.12-2.5.1/config/server.properties
+ExecStop=/usr/local/kafka_2.12-2.5.1/bin/kafka-server-stop.sh
+KillMode=none
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+EOF</span>
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上启动kafka服务</p>
+<pre><code class="language-bash">sudo systemctl daemon-reload &amp;&amp; sudo systemctl <span class="hljs-built_in">enable</span> --now kafka
+</code></pre>
+</li>
+</ol>
+<h2 id="nacos集群">Nacos集群</h2>
+<h3 id="所有步骤必做不可遗漏任何一项必须先执行完-必做系统优化步骤-4"><strong>所有步骤必做，不可遗漏任何一项</strong>，<strong>必须先执行完<a href="https://weikezhijia.feishu.cn/wiki/QrXswXY2Yioi8ckNcZrcrZ0Qncg"> 【必做】系统优化</a>步骤</strong></h3>
+<h3 id="依赖jdk和mysql需要先执行完-jdk安装和-mysql集群">依赖JDK和MySQL，需要先执行完<a href="https://weikezhijia.feishu.cn/wiki/LjYnwRqQpiWAk9kXmKxcQPOYn2e"> JDK安装</a>和<a href="https://weikezhijia.feishu.cn/wiki/FlU7wRxz0iQntvk61CDcrAhQnZd"> MySQL集群</a></h3>
+<h3 id="最少需要三台服务器来部署nacos集群假定三台服务器ip为111122223333请根据现场实际情况修改"><strong>最少需要三台服务器来部署nacos集群，</strong>假定三台服务器IP为1.1.1.1、2.2.2.2、3.3.3.3，<strong>请根据现场实际情况修改</strong></h3>
+<ol>
+<li>
+<p>下载本文档提供的nacos包，将其上传至三台服务器并解压(将/srv替换为你想要解压到的目录)</p>
+<ol>
+<li>由于nacos日志控制在代码层面，因此需要将nacos安装在数据盘而非/usr/local</li>
+</ol>
+<pre><code class="language-bash">sudo tar xf nacos-server-2.1.2.tar.gz -C /srv
+</code></pre>
+</li>
+<li>
+<p>将下载的nacos初始化sql导入mysql(<strong>一定要用我们提供的sql，否则会导入失败</strong>)</p>
+<ol>
+<li>导入的nacos默认用户信息：nacos / nacos</li>
+</ol>
+</li>
+<li>
+<p>在三台服务器上添加nacos服务需要的配置和文件，注意事项：</p>
+<ol>
+<li>
+<p><strong>文件里加红加粗的文字为需要手动替换的部分</strong></p>
+</li>
+<li>
+<p>将mysql.svc.ip替换为部署<a href="https://weikezhijia.feishu.cn/wiki/FlU7wRxz0iQntvk61CDcrAhQnZd?fromScene=spaceOverview"> MySQL集群</a>时分配的VIP</p>
+</li>
+<li>
+<p>1.1.1.1、2.2.2.2、3.3.3.3需要替换为三台服务器的真实IP</p>
+</li>
+<li>
+<p>将/usr/local替换为nacos解压到的目录</p>
+</li>
+<li>
+<p>将/srv/nacos替换为你想要存放nacos数据、日志的目录</p>
+</li>
+<li>
+<p>/opt需要替换为执行<a href="https://weikezhijia.feishu.cn/wiki/LjYnwRqQpiWAk9kXmKxcQPOYn2e"> JDK安装</a>时，指定的jdk解压到的目录</p>
+</li>
+<li>
+<p>nacos集群模式默认内存堆栈为2G</p>
+</li>
+</ol>
+<pre><code class="language-bash"><span class="hljs-comment"># 添加集群配置文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /srv/nacos/conf/cluster.conf
+1.1.1.1:8848
+2.2.2.2:8848
+3.3.3.3:8848
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 添加nacos配置文件</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /srv/nacos/conf/application.properties
+server.servlet.contextPath=/nacos
+server.error.include-message=ALWAYS
+server.port=8848
+spring.datasource.platform=mysql
+db.num=1
+db.url.0=jdbc:mysql://mysql.svc.ip:3306/smartxma_nacos?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true&amp;useUnicode=true&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai
+db.user.0=root
+db.password.0=fNRx6GaGaoemM1N
+db.pool.config.connectionTimeout=30000
+db.pool.config.validationTimeout=10000
+db.pool.config.maximumPoolSize=20
+db.pool.config.minimumIdle=2
+
+nacos.naming.empty-service.auto-clean=true
+nacos.naming.empty-service.clean.initial-delay-ms=50000
+nacos.naming.empty-service.clean.period-time-ms=30000
+
+management.metrics.export.elastic.enabled=false
+management.metrics.export.influx.enabled=false
+server.tomcat.accesslog.enabled=true
+server.tomcat.accesslog.pattern=%h %l %u %t &quot;%r&quot; %s %b %D %{User-Agent}i %{Request-Source}i
+server.tomcat.basedir=file:/srv/nacos/logs
+
+nacos.security.ignore.urls=/,/error,/**/*.css,/**/*.js,/**/*.html,/**/*.map,/**/*.svg,/**/*.png,/**/*.ico,/console-ui/public/**,/v1/auth/**,/v1/console/health/**,/actuator/**,/v1/console/server/**
+nacos.core.auth.system.type=nacos
+nacos.core.auth.enabled=true
+nacos.core.auth.caching.enabled=true
+nacos.core.auth.enable.userAgentAuthWhite=false
+nacos.core.auth.server.identity.key=serverIdentity
+nacos.core.auth.server.identity.value=Zmd2e2YwSEpIXWZ3RSMK
+nacos.core.auth.plugin.nacos.token.expire.seconds=18000
+nacos.core.auth.plugin.nacos.token.secret.key=d2VpdWxoa2Zxd3dxZXJrbHdlcmtqcXdqaHItODdZVVlVVTIxMzQ4Nzlqa2R3Zm0udwo=
+nacos.istio.mcp.server.enabled=false
+EOF</span>
+</code></pre>
+<pre><code class="language-bash"><span class="hljs-comment"># 创建elasticsearch用户（主要为了复用）</span>
+sudo groupadd elastic
+sudo useradd elastic -g elastic
+
+<span class="hljs-comment"># 对目录授权</span>
+sudo <span class="hljs-built_in">chown</span> -R elastic.elastic /srv/nacos
+
+<span class="hljs-comment"># 添加nacos服务</span>
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /etc/systemd/system/nacos.service
+[Unit]
+Description=nacos Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=forking
+User=elastic
+Group=elastic
+Environment=JAVA_HOME=/opt/jdk8u345-b01
+ExecStart=/bin/bash /srv/nacos/bin/startup.sh
+ExecStop=/bin/bash /srv/nacos/bin/shutdown.sh
+KillMode=none
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+EOF</span>
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上启动nacos服务</p>
+<pre><code class="language-bash">sudo systemctl daemon-reload &amp;&amp; sudo systemctl <span class="hljs-built_in">enable</span> --now nacos
+</code></pre>
+</li>
+</ol>
+<h2 id="附录如何使用nginxopenresty为nacos提供统一入口">附录：如何使用nginx(openresty)为nacos提供统一入口</h2>
+<p>nacos官方的建议是使用负载均衡器为nacos提供统一入口，但部分客户无法提供负载均衡器</p>
+<p>因为提供一个可以使用nginx实现的方法</p>
+<p>在nginx主配置文件里http段前面增加stream段，内容如下：</p>
+<pre><code class="language-nginx"><span class="hljs-section">stream</span> {
+    <span class="hljs-attribute">include</span> nacos.conf;
+}
+</code></pre>
+<p>在主配置所在的目录增加nacos.conf，内容如下：</p>
+<pre><code class="language-nginx"><span class="hljs-section">upstream</span> nacos-server {
+    least_conn;
+    <span class="hljs-attribute">server</span> <span class="hljs-number">1.1.1.1:8848</span>;
+    <span class="hljs-attribute">server</span> <span class="hljs-number">2.2.2.2:8848</span>;
+    <span class="hljs-attribute">server</span> <span class="hljs-number">3.3.3.3:8848</span>;
+}
+
+<span class="hljs-section">upstream</span> nacos-grpc {
+    least_conn;
+    <span class="hljs-attribute">server</span> <span class="hljs-number">1.1.1.1:9848</span>;
+    <span class="hljs-attribute">server</span> <span class="hljs-number">2.2.2.2:9848</span>;
+    <span class="hljs-attribute">server</span> <span class="hljs-number">3.3.3.3:9848</span>;
+}
+
+<span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span>       <span class="hljs-number">8848</span>;
+    <span class="hljs-attribute">proxy_pass</span>   nacos-server;
+}
+
+<span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span>       <span class="hljs-number">9848</span>;
+    <span class="hljs-attribute">proxy_pass</span>   nacos-grpc;
+}
+</code></pre>
+<h3 id="minio集群">MinIO集群</h3>
+<h4 id="所有步骤必做不可遗漏任何一项必须先执行完-必做系统优化步骤-5"><strong>所有步骤必做，不可遗漏任何一项</strong>，<strong>必须先执行完<a href="https://weikezhijia.feishu.cn/wiki/QrXswXY2Yioi8ckNcZrcrZ0Qncg"> 【必做】系统优化</a>步骤</strong></h4>
+<h4 id="依赖docker需要先执行完-docker安装">依赖docker，需要先执行完<a href="https://weikezhijia.feishu.cn/wiki/KFjdwfHkziv686k0eljc2uq5nWb"> Docker安装</a></h4>
+<h4 id="最少需要三台服务器来部署minio集群假定三台服务器ip为111122223333请根据现场实际情况修改"><strong>最少需要三台服务器来部署minio集群，</strong>假定三台服务器IP为1.1.1.1、2.2.2.2、3.3.3.3，<strong>请根据现场实际情况修改</strong></h4>
+<ol>
+<li>
+<p>下载本文档提供的minio包，将其上传至三台服务器并导入</p>
+<pre><code class="language-bash">sudo docker load -i minio_aarch64.tar.gz
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上添加minio服务需要的配置，注意事项：</p>
+<ol>
+<li>
+<p><strong>文件里加红加粗的文字为需要手动替换的部分</strong></p>
+</li>
+<li>
+<p>extra_hosts部分，1.1.1.1、2.2.2.2、3.3.3.3需要替换为三台服务器的真实IP</p>
+</li>
+<li>
+<p>将/srv/minio替换为你想要存放minio数据的目录</p>
+</li>
+<li>
+<p>MINIO_ROOT_USER的值是minio管理员账号，MINIO_ROOT_PASSWORD的值是管理员密码</p>
+</li>
+<li>
+<p>service下的红色字体，三台分别设置minio1、minio2、minio3，不可重复，而且需要与extra_hosts部分填写的映射关系完全一致</p>
+</li>
+</ol>
+<pre><code class="language-bash">sudo <span class="hljs-built_in">mkdir</span> -pv /srv/minio/{data1,data2}
+
+<span class="hljs-built_in">cat</span> &lt;&lt;<span class="hljs-string">EOF | sudo tee /srv/minio/minio.yml
+version: &#x27;3.7&#x27;
+
+x-minio-common: &amp;minio-common
+  image: minio/minio:RELEASE.2023-04-13T03-08-07Z
+  command: server --console-address &quot;:9001&quot; http://minio{1...3}/data{1...2}
+  ports:
+    - &quot;9000:9000&quot;
+    - &quot;9001:9001&quot;
+  extra_hosts:
+    minio1: 1.1.1.1
+    minio2: 2.2.2.2
+    minio3: 3.3.3.3
+  environment:
+    MINIO_ROOT_USER: admin
+    MINIO_ROOT_PASSWORD: OSSadm-4test
+  volumes:
+    - /srv/minio/data1:/data1
+    - /srv/minio/data2:/data2
+  healthcheck:
+    test: [&quot;CMD&quot;, &quot;curl&quot;, &quot;-f&quot;, &quot;http://localhost:9000/minio/health/live&quot;]
+    interval: 30s
+    timeout: 20s
+    retries: 3
+  restart: unless-stopped
+
+services:
+  分别设置为minio1/minio2/minio3:
+    &lt;&lt;: *minio-common
+    hostname: 分别设置为minio1/minio2/minio3
+EOF</span>
+</code></pre>
+</li>
+<li>
+<p>在三台服务器上启动minio（<strong>/srv/minio需要与上文一样进行修改</strong>）</p>
+<pre><code class="language-bash">sudo docker-compose -f /srv/minio/minio.yml up -d
+</code></pre>
+</li>
+</ol>
+<h3 id="附录如何使用nginxopenresty为minio提供统一入口">附录：如何使用nginx(openresty)为minio提供统一入口</h3>
+<p>在nginx主配置文件里http段include的目录内添加一个新的配置文件oss.51ima.lo，内容如下：</p>
+<pre><code class="language-nginx"><span class="hljs-section">upstream</span> minio {
+    least_conn;
+    <span class="hljs-attribute">server</span> <span class="hljs-number">1.1.1.1:9000</span>;
+    <span class="hljs-attribute">server</span> <span class="hljs-number">2.2.2.2:9000</span>;
+    <span class="hljs-attribute">server</span> <span class="hljs-number">3.3.3.3:9000</span>;
+}
+
+<span class="hljs-section">upstream</span> minio-console {
+    least_conn;
+    <span class="hljs-attribute">server</span> <span class="hljs-number">1.1.1.1:9001</span>;
+    <span class="hljs-attribute">server</span> <span class="hljs-number">2.2.2.2:9001</span>;
+    <span class="hljs-attribute">server</span> <span class="hljs-number">3.3.3.3:9001</span>;
+}
+
+<span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span>       <span class="hljs-number">9000</span>;
+    <span class="hljs-attribute">access_log</span> /home/finance/Logs/nginx/oss.51ima.lo/minio_access.log main;
+    <span class="hljs-attribute">error_log</span> /home/finance/Logs/nginx/oss.51ima.lo/minio_error.log <span class="hljs-literal">warn</span>;
+    <span class="hljs-attribute">server_name</span>  oss.51ima.lo;
+    <span class="hljs-attribute">ignore_invalid_headers</span> <span class="hljs-literal">off</span>;
+    <span class="hljs-attribute">client_max_body_size</span> <span class="hljs-number">100m</span>;
+    <span class="hljs-attribute">proxy_buffering</span> <span class="hljs-literal">off</span>;
+    <span class="hljs-attribute">proxy_request_buffering</span> <span class="hljs-literal">off</span>;
+
+    <span class="hljs-section">location</span> / {
+        <span class="hljs-attribute">proxy_set_header</span> Host <span class="hljs-variable">$http_host</span>;
+        <span class="hljs-attribute">proxy_set_header</span> X-Real-IP <span class="hljs-variable">$remote_addr</span>;
+        <span class="hljs-attribute">proxy_set_header</span> X-Forwarded-For <span class="hljs-variable">$proxy_add_x_forwarded_for</span>;
+        <span class="hljs-attribute">proxy_set_header</span> X-Forwarded-Proto <span class="hljs-variable">$scheme</span>;
+        <span class="hljs-attribute">proxy_connect_timeout</span> <span class="hljs-number">300</span>;
+        <span class="hljs-attribute">proxy_http_version</span> <span class="hljs-number">1</span>.<span class="hljs-number">1</span>;
+        <span class="hljs-attribute">proxy_set_header</span> Connection <span class="hljs-string">&quot;&quot;</span>;
+        <span class="hljs-attribute">chunked_transfer_encoding</span> <span class="hljs-literal">off</span>;
+        <span class="hljs-attribute">proxy_pass</span> http://minio/;
+    }
+}
+
+<span class="hljs-section">server</span> {
+    <span class="hljs-attribute">listen</span>       <span class="hljs-number">9001</span>;
+    <span class="hljs-attribute">access_log</span> /home/finance/Logs/nginx/oss.51ima.lo/minio_console_access.log main;
+    <span class="hljs-attribute">error_log</span> /home/finance/Logs/nginx/oss.51ima.lo/minio_console_error.log <span class="hljs-literal">warn</span>;
+    <span class="hljs-attribute">server_name</span>  oss.51ima.lo;
+    <span class="hljs-attribute">ignore_invalid_headers</span> <span class="hljs-literal">off</span>;
+    <span class="hljs-attribute">client_max_body_size</span> <span class="hljs-number">100m</span>;
+    <span class="hljs-attribute">proxy_buffering</span> <span class="hljs-literal">off</span>;
+    <span class="hljs-attribute">proxy_request_buffering</span> <span class="hljs-literal">off</span>;
+
+    <span class="hljs-section">location</span> / {
+        <span class="hljs-attribute">proxy_set_header</span> Host <span class="hljs-variable">$http_host</span>;
+        <span class="hljs-attribute">proxy_set_header</span> X-Real-IP <span class="hljs-variable">$remote_addr</span>;
+        <span class="hljs-attribute">proxy_set_header</span> X-Forwarded-For <span class="hljs-variable">$proxy_add_x_forwarded_for</span>;
+        <span class="hljs-attribute">proxy_set_header</span> X-Forwarded-Proto <span class="hljs-variable">$scheme</span>;
+        <span class="hljs-attribute">proxy_set_header</span> X-NginX-Proxy <span class="hljs-literal">true</span>;
+        <span class="hljs-attribute">real_ip_header</span> X-Real-IP;
+        <span class="hljs-attribute">proxy_connect_timeout</span> <span class="hljs-number">300</span>;
+        <span class="hljs-attribute">proxy_http_version</span> <span class="hljs-number">1</span>.<span class="hljs-number">1</span>;
+        <span class="hljs-attribute">proxy_set_header</span> Upgrade <span class="hljs-variable">$http_upgrade</span>;
+        <span class="hljs-attribute">proxy_set_header</span> Connection <span class="hljs-string">&quot;upgrade&quot;</span>;
+        <span class="hljs-attribute">chunked_transfer_encoding</span> <span class="hljs-literal">off</span>;
+        <span class="hljs-attribute">proxy_pass</span> http://minio-console/;
+    }
+}
+</code></pre>
+
+            <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+            
+        </body>
+        </html>
